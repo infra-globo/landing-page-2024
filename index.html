@@ -11,45 +11,95 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav id="menu">
-    <a class="nav_item" href="#">
-      Serviços
-    </a>
-    <a class="nav_item" href="#">
-      Sobre nós
-    </a>
-    <a class="nav_item" href="#">
-      Contato
-    </a>
-  </nav>
-  <nav id="sociais">
-    <a class="nav_item" href="#">
-      <img src="img/facebook.png" alt="fb">
-    </a>
-    <a class="nav_item" href="#">
-      <img src="img/instagram.png" alt="ig">
-    </a>
-  </nav>
-  <section id="capa">
-    <img id="logo" src="img/logo.png" alt="Globosolution">
-    <div id="conteudo_capa">
-      <div id="texto_capa">
-        <h1 id="titulo">Sua Empresa<br>Merece o<br>MELHOR!</h1>
-        <span id="subtitulo">Somos uma empresa de softwares de gestão que<br>agregam valor à pequenos e grandes negócios.</span>
-        <a id="botao_conheca" href="#">Conheça</a>
+  <div class="container">
+    <nav class="menu">
+      <a href="#servicos">
+        <span>Serviços</span>
+      </a>
+      <a href="#">
+        <span>Sobre nós</span>
+      </a>
+      <a href="#">
+        <span>Contato</span>
+      </a>
+    </nav>
+    <nav class="sociais">
+      <a href="#"><img src="img/facebook.png" alt="fb"></a>
+      <a href="#"><img src="img/instagram.png" alt="ig"></a>
+    </nav>
+    <img class="logo" src="img/logo.png" alt="Globosolution">
+    <section id="capa">
+      <div class="texto_capa">
+        <h1 class="titulo">Sua Empresa<br>Merece o<br>MELHOR!</h1>
+        Somos uma empresa de softwares de gestão que<br>
+        agregam valor à pequenos e grandes negócios.<br><br><br>
+        <a class="botao_conheca" href="#servicos">Conheça</a>
       </div>
-      <div id="imagem_capa">
-        <img id="foto_capa" src="img/foto_capa.jpg" alt="">
-        <img id="icone_carrinho" class="icone_capa" src="img/icone_carrinho.png" alt="">
-        <img id="icone_estoque" class="icone_capa" src="img/icone_estoque.png" alt="">
-        <img id="icone_sacola" class="icone_capa" src="img/icone_sacola.png" alt="">
+      <div class="imagem_capa">
+        <img class="foto_capa" src="img/foto_capa.jpg" alt="">
+        <div class="icones">
+          <img class="icone_carrinho" src="img/icone_carrinho.png" alt="">
+          <img class="icone_estoque" src="img/icone_estoque.png" alt="">
+          <img class="icone_sacola" src="img/icone_sacola.png" alt="">
+        </div>
       </div>
+    </section>
+    <div class="rodape_capa">
+       <a href="#servicos">
+         <img src="img/seta_para_baixo.png" alt="seta para baixo">
+       </a>
     </div>
-  </section>
-  <div id="rodape_capa">
-    <img id="seta_para_baixo" src="img/seta_para_baixo.png" alt="Para baixo">
+    <section id="servicos">
+      <h2 class="pill">PRINCIPAIS SERVIÇOS</h2>
+      <div>
+        <div>
+          <h3>PDV-TEF</h3>
+          <p>Simplifique a gestão do seu comércio e registre vendas com mais agilidade e segurança com
+            a frente de caixa (PDV) 100% facil e rapido, tudo integrado ao financeiro. Aqui, a NFC-e
+            (cupom fiscal eletrônico) é fácil e rápida, garantindo velocidade no atendimento aos seus clientes.
+            Com o TEF você interliga o pagamento eletrônico como cartões de crédito, debito, Pix
+            a emissão do cupom, com agilidade e sem se preocupar em conferir se informou o valor correto na maquininha.</p>
+        </div>
+        <br><br>
+        <div class="direita">
+          <h3>Controle de estoque</h3>
+          <p>Com o sistema de gestão da globosolution você faz o controle de estoque de seus produtos,
+            peças e insumos de forma simples, evitando erros nos processos. Garanta o total controle de
+            vendas de seu negócio, saiba a quantidade exata de produtos disponíveis por cor e tamanho.
+            Nosso controle de estoque ainda permite, que seja definido a localização X / Y, informando
+            prateleiras, corredores ou seja a posição fisica do seu produto.</p>
+        </div>
+        <br><br>
+        <div>
+          <h3>Integração WhatsApp</h3>
+          <p>Aumente o faturamento do seu delivery via WhatsApp. Se o seu négocio é vender, automatize
+            o atendimento do seu delivery com o famoso robozinho para WhatsApp, trazendo mais faturamento
+            para o seu negócio. Conte com cardápio digital onde seus clientes entram em contato,
+            recebem o link da sua loja, escolhem os produtos, a forma de entrega e pagamento, e você
+            recebe tudo prontinho apenas para emitir a nota fiscal e despachar o pedido.</p>
+        </div>
+        <br><br>
+        <div class="direita">
+          <h3>Financeiro</h3>
+          <p>Cansado de perder tempo com planilhas, lançamentos de extratos bancários, conciliação 
+            financeira e tudo mais? Gerencie o seu negócio e organize todos os seus pagamentos em um
+            só lugar! Nosso sistema integra todas as funcionalidades ao financeiro o famoso contas a
+            pagar e receber, emissão de notas fiscais, lançamento de caixas, recebimentos do cartao de
+            crédito com a devida taxa de desconto, exibindo o valor real que poderá ser utilizado no
+            fluxo.</p>
+        </div>
+        <br><br>
+        <div>
+          <h3>Marketplace</h3>
+          <p>Aumente o faturamento, vendendo nos principais marketplaces do mercado Com toda a 
+            estrutura necessária para facilitar a gestão de vendas e aumentar a performance do seu negócio.
+            A globosolution descomplica a integração dos seus anuncios nos principais marketplaces
+            com o gerenciamento interno junto ao erp, emissao de nota, baixa de estoque...</p>
+        </div>
+      </div>
+    </section>
+    <div class="branco">
+    </div>
   </div>
-  <section class="branco">
-  </section>
 </body>
 </html>
