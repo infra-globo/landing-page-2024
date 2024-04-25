@@ -40,6 +40,9 @@ nav > * {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a {
     color: inherit;
     text-decoration: none;
 }
@@ -74,7 +77,6 @@ nav > * {
 }
 
 img {
-    display: block;
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
@@ -122,10 +124,9 @@ img {
 }
 
 .imagem_capa {
-    width: 95%;
+    width: 90%;
     aspect-ratio: 4/3;
     container-type: inline-size;
-    /* translate: 0 10%; */
     border-radius: 4em 0 4em 4em;
     background-color: var(--verde);
 }
@@ -172,11 +173,6 @@ img {
     top: 15%;
 }
 
-.branco{
-    width: 100%;
-    aspect-ratio: 1/1;
-}
-
 .rodape_capa {
     height: 1em;
     background: var(--verde);
@@ -193,16 +189,22 @@ img {
 }
 
 .pill {
+    display: block;
     color: black;
     background-color: var(--verde);
-    padding: 0.3em 0.5em;
+    padding: 0.5em 1em;
     border-radius: 2em;
+    text-align: center;
 }
 
 #servicos {
     display: block;
     margin-top: 12em;
     width: 100%;
+}
+
+#servicos > .pill {
+    padding: 0.2em 0.5em;
 }
 
 #servicos > h2 {
@@ -219,16 +221,252 @@ img {
     grid-template-columns: 1;
     box-sizing: border-box;
     padding: 12em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    font-size: 1.1em;
+    line-height: 1.5;
 }
 
 #servicos h3 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin: 0;
+    margin-top: 0.5em;
+}
+
+.imagem_servico {
+    width: 16em;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 0.5em solid var(--verde);
+    border-radius: 0% 50% 50% 25%;
+    float: left;
+    margin-right: 2em;
 }
 
 .direita {
     text-align: right;
 }
+
+.direita > .imagem_servico {
+    border-radius: 50% 0% 25% 50%;
+    float: right;
+    margin-left: 2em;
+    margin-right: 0;
+}
+
+.texto_sobre {
+    container-type: inline-size;
+    background-color: var(--verde);
+    box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.5);
+    margin-top: 6em;
+    margin-bottom: 6em;
+    text-align: center;
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+.fundo_sobre {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(img/fundo_estampa.png);
+    background-size: cover;
+    filter: brightness(10%) saturate(0);
+}
+
+.texto_sobre > span{
+    font-size: 4.5em;
+    line-height: 1.5;
+}
+
+.rabiscado  {
+    background: url(img/rabisco.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0.7em;
+}
+
+.destacado {
+    border-radius: 2em;
+    background-color: black;
+    color: var(--verde);
+    filter: brightness(1) saturate(1);
+    padding: 0.1em;
+}
+
+.numeros {
+    margin: auto;
+    margin-top: 6em;
+    margin-bottom: 6em;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: 
+    "a a a"
+    "b c d";
+    gap: 4em;
+    align-items: center;
+    justify-items: center;
+    text-align: right;
+    font-weight: 800;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.numeros img {
+    height: .9em;
+    translate: -10% 10%;
+
+}
+
+.numeros > div > h2 {
+    font-size: 5em;
+    margin: 0;
+}
+
+.numeros > :first-child {
+    grid-area: a;
+    color: var(--verde);
+    line-height: .9;
+    font-size: 1.5em;
+}
+
+.numeros > :first-child > h2{
+    font-size: 8em;
+    margin: 0;
+    color: black;
+}
+
+.descubra {
+    margin: auto;
+    margin-top: 2em;
+    width: fit-content;
+    font-size: 2.5em;
+}
+
+.planos {
+    margin-top: 12em;
+    display: grid;
+    box-sizing: border-box;
+    padding: 2em;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4em;
+    font-weight: 300;
+    font-size: 1.3em;
+}
+
+.planos > div{
+    container-type: inline-size;
+    height: 100%;
+}
+
+.planos > div > span {
+    display: block;
+    margin: auto;
+    margin-bottom: 0.2em;
+    text-align: center;
+    font-size: 2em;
+}
+
+.planos > :nth-child(2){
+    translate: 0 -10%;
+}
+
+.card_plano {
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 0 1em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    background-color: white;
+    box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.5);
+}
+
+.card_plano > span {
+    height: fit-content;
+    padding: 0.5em 0;
+    border-bottom: solid black 1px;
+}
+
+.card_plano > :nth-last-child(2) {
+    border-bottom: none;
+}
+
+.card_plano > .pill {
+    bottom: 0;
+    align-self: center;
+    margin: 1.5em;
+    margin-top: auto;
+}
+
+.card_plano > :first-child {
+    text-align: center;
+    padding: 0;
+    padding-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.texto_grande{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#contato {
+    margin-top: 12em;
+    background-image: url(img/fundo_pagina_inicial.png);
+    padding: 8em;
+    color: white;
+    font-weight: 600;
+}
+
+#contato > form {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#contato h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+}
+
+#contato > form input {
+    height: 3em;
+    width: 20em;
+    font-size: 1em;
+    outline: none; 
+    box-sizing: border-box;
+    border-radius: 0 2em 2em 2em;
+    border: none;
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+#contato > form button {
+    width: fit-content;
+    align-self: center;
+    font-size: 1.5em;
+    border: none;
+    margin-top: 1em;
+}
+
+/* .imagem_servico {
+    width: 16em;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: 0.5em solid var(--verde);
+    border-radius: 0% 50% 50% 25%;
+    float: left;
+    margin-right: 2em;
+} */
 
 @container pagina (width < 80rem){
     .menu {
@@ -262,6 +500,28 @@ img {
 
     #servicos > h2 {
         font-size: 2.5em;
+    }
+
+    #servicos > div {
+        padding: 12em 1em;
+    }
+
+    .imagem_servico {
+        float: none;
+    }
+
+    .direita .imagem_servico {
+        float: none;
+    }
+
+    .planos {
+        margin-top: 6em;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+
+    .planos > :nth-child(2){
+        translate: 0 0;
     }
 
 }
