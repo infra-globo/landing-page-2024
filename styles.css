@@ -21,9 +21,9 @@ html, body {
 
 .container {
     container: pagina / inline-size;
-    width: min(100%, 220vh);
-    font-size: max(min(1vw,2.2vh), 1rem);
+    width: min(100%, 220vh);    /*contaúdo da página fica contido num retangulo central em telas ultra-wide*/
     margin: auto;
+    font-size: max(min(1vw,2.2vh), 1rem); /*fonte ajusta ao tamonto da tela, nunca menor que 1rem*/
 }
 
 nav {
@@ -255,6 +255,18 @@ img {
     margin-right: 0;
 }
 
+.video {
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    border: #E3FF3C solid .5em;
+    box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.5);
+    margin-top: 6em;
+    margin-bottom: 6em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .texto_sobre {
     container-type: inline-size;
     background-color: var(--verde);
@@ -458,15 +470,41 @@ img {
     margin-top: 1em;
 }
 
-/* .imagem_servico {
-    width: 16em;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border: 0.5em solid var(--verde);
-    border-radius: 0% 50% 50% 25%;
-    float: left;
-    margin-right: 2em;
-} */
+.rodape {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 4em;
+    justify-items: center;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.rodape img {
+    filter: brightness(10%) saturate(0);
+    width: 13em;
+    padding-bottom: 1em;
+    border-bottom: solid black 2px;;
+}
+
+.rodape > :nth-child(2) {
+    justify-self: stretch;
+    border-left: solid black 2px;
+    border-right: solid black 2px ;
+}
+
+.rodape > :nth-child(2) > div {
+    margin: auto;
+    width: fit-content;
+}
+
+.rodape a {
+    line-height: 2;
+}
+
+.rodape h4 {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+}
 
 @container pagina (width < 80rem){
     .menu {
@@ -522,6 +560,19 @@ img {
 
     .planos > :nth-child(2){
         translate: 0 0;
+    }
+
+    .rodape {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+        margin: 2em;
+    }
+
+    .rodape > :nth-child(2) {
+        justify-self: stretch;
+        border-left: unset;
+        border-right: unset ;
     }
 
 }
