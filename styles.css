@@ -435,6 +435,7 @@ img {
     padding: 8em;
     color: white;
     font-weight: 600;
+    box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.5);
 }
 
 #contato > form {
